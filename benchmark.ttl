@@ -1,0 +1,35 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hobbit: <http://w3id.org/hobbit/vocab#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://project-hobbit.eu/juliabenchmark/benchmark> a hobbit:Benchmark;
+    rdfs:label "Julia Example Benchmark"@en;
+    rdfs:comment "test julia"@en;
+    hobbit:version "v1.0"@en;
+    hobbit:hasAPI <http://project-hobbit.eu/juliabenchmark/API>;
+    hobbit:imageName "git.project-hobbit.eu:4567/xhulja_shahini/juliabenchmark/benchmark-controller";
+    hobbit:usesImage "git.project-hobbit.eu:4567/juliabenchmark/datagen";
+    hobbit:usesImage "git.project-hobbit.eu:4567/juliabenchmark/taskgen";   
+    hobbit:usesImage "git.project-hobbit.eu:4567/juliabenchmark/eval-module";  
+    hobbit:usesImage "git.project-hobbit.eu:4567/juliabenchmark/eval-storage";  
+    hobbit:hasParameter <http://project-hobbit.eu/juliabenchmark/hitAt1>;      
+    hobbit:measuresKPI <http://project-hobbit.eu/juliabenchmark/hit1>.
+
+
+
+<http://project-hobbit.eu/juliabenchmark/hitAt1> a hobbit:ConfigurableParameter;
+    rdfs:label "Hit at 1, %"@en;
+    rdfs:range xsd:double.
+
+<http://project-hobbit.eu/juliabenchmark/hit1> a hobbit:KPI;
+    rdfs:label "Hit at 1, %"@en;
+    rdfs:range xsd:double.
+
+
+
+
+
+
+
+
+
